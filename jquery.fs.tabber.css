@@ -1,0 +1,16 @@
+/*
+ * Tabber [Formstone Library]
+ * @author Ben Plum
+ * @version 0.1.0
+ *
+ * Copyright © 2013 Ben Plum <mr@benplum.com>
+ * Released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+ */
+
+	.tabber.active { overflow: hidden; }
+	.tabber.active .tabber-tabs { overflow: hidden; }
+	.tabber.active .tabber-tab { color: #999; cursor: pointer; display: block; float: left; }
+	.tabber.active .tabber-tab.active { color: #333; }
+	.tabber.active .tabber-contents { overflow: hidden; }
+	.tabber.active .tabber-content { display: none; }
+	.tabber.active .tabber-content.active { display: block; }
