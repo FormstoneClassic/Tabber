@@ -4,7 +4,7 @@
 	/**
 	 * @options
 	 * @param customClass [string] <''> "Class applied to instance"
-	 * @param maxWidth [string] <'980px'> "Width at which to auto-disable plugin"
+	 * @param maxWidth [string] <'980px'> "Width at which to auto-disable mobile styles"
 	 */
 	var options = {
 		customClass: "",
