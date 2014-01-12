@@ -1,8 +1,10 @@
-Tabber
-======
+<a href="http://gruntjs.com" target="_blank"><img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt"></a> 
+# Tabber 
 
-A jQuery plugin for adding simple tabbed interfaces. Part of the formstone library.
+A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
 
-[Documentation and Examples](http://www.benplum.com/formstone/tabber/)
+- [Demo](http://formstone.it/components/Tabber/demo/index.html) 
+- [Documentation](http://formstone.it/tabber/) 
 
-Bower Support: `bower install Tabber`
+#### Bower Support 
+`bower install Tabber`
