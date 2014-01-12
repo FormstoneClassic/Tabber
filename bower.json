@@ -1,6 +1,6 @@
 {
   "name": "Tabber",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library.",
   "author": {
     "name": "Ben Plum",
@@ -10,7 +10,11 @@
   "license": "MIT",
   "homepage": "http://formstone.it/tabber/",
   "ignore": [
-    "*.jquery.json",
+    "*.json",
     "Gruntfile.js"
+  ],
+  "main": [
+    "jquery.fs.tabber.js",
+    "jquery.fs.tabber.css"
   ]
 }

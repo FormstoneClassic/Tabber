@@ -1,16 +1,9 @@
 /* 
- * Tabber v3.0.0 - 2014-01-12 
+ * Tabber v3.0.1 - 2014-01-12 
  * A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
  * http://formstone.it/tabber/ 
  * 
  * Copyright 2014 Ben Plum; MIT Licensed 
- */ 
-
-/** 
- * @plugin 
- * @name Tabber 
- * @description A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
- * @version 3.0.0 
  */ 
 
 ;(function ($, window) {
