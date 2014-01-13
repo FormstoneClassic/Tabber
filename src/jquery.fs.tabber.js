@@ -18,7 +18,7 @@
 		 * @name defaults
 		 * @description Sets default plugin options
 		 * @param opts [object] <{}> "Options object"
-		 * @example $(".target").tabber("defaults", opts);
+		 * @example $.tabber("defaults", opts);
 		 */
 		defaults: function(opts) {
 			options = $.extend(options, opts || {});
@@ -183,5 +183,11 @@
 			return _init.apply(this, arguments);
 		}
 		return this;
+	};
+
+	$.tabber = function(method) {
+		if (method === "defaults") {
+			pub.defaults.apply(this, Array.prototype.slice.call(arguments, 1));
+		}
 	};
 })(jQuery, this);
