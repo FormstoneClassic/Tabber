@@ -1,5 +1,5 @@
 /* 
- * Tabber v3.0.2 - 2014-01-13 
+ * Tabber v3.0.3 - 2014-01-14 
  * A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
  * http://formstone.it/tabber/ 
  * 
@@ -104,7 +104,8 @@
 			var data = $.extend({
 				$tabber: $tabber,
 				$tabs: $tabber.find(".tabber-tab"),
-				$handles: $tabber.find(".tabber-handle").not(".mobile")
+				$handles: $tabber.find(".tabber-handle"),
+				index: -1
 			}, opts);
 
 			for (var i = 0, count = data.$handles.length; i < count; i++) {
@@ -154,19 +155,31 @@
 	 * @param e [object] "Event data"
 	 */
 	function _set(data, index) {
-		if (!data.$tabs.eq(index).hasClass("active")) {
-			data.$handles.removeClass("active")
-						 .eq(index)
-						 .addClass("active");
-
-			data.$mobileHandles.removeClass("active")
-							   .eq(index)
-							   .addClass("active");
+		if (index !== data.index) {
+			data.index = index;
 
 			data.$tabs.removeClass("active")
 					  .eq(index)
 					  .addClass("active");
+
+			_update(data);
 		}
+	}
+
+	/**
+	 * @method private
+	 * @name _update
+	 * @description Updates the active handle
+	 * @param data [object] "Instance data"
+	 */
+	function _update(data) {
+		data.$handles.removeClass("active")
+					 .eq(data.index)
+					 .addClass("active");
+
+		data.$mobileHandles.removeClass("active")
+						   .eq(data.index)
+						   .addClass("active");
 	}
 
 	/**
@@ -182,6 +195,8 @@
 		} else {
 			data.$tabber.removeClass("mobile");
 		}
+
+		_update(data);
 	}
 
 	$.fn.tabber = function(method) {
