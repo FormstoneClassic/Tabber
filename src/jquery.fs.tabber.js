@@ -36,9 +36,10 @@
 				var data = $(this).data("tabber");
 
 				if (data !== null) {
-					$(this).removeClass("tabber initialized " + data.customClass)
-						   .off(".tabber")
-						   .data("tabber", null);
+					data.$mobileHandles.remove();
+					data.$tabber.removeClass("tabber initialized " + data.customClass)
+							    .off(".tabber")
+							    .data("tabber", null);
 				}
 			});
 		},
@@ -148,8 +149,14 @@
 	 */
 	function _set(data, index) {
 		if (index !== data.index) {
-			data.index = index;
+			if (index < 0) {
+				index = 0;
+			}
+			if (index > data.$tabs.length) {
+				index = data.$tabs.length - 1;
+			}
 
+			data.index = index;
 			data.$tabs.removeClass("active")
 					  .eq(index)
 					  .addClass("active");
