@@ -35,7 +35,7 @@
 			return $(this).each(function(i) {
 				var data = $(this).data("tabber");
 
-				if (data !== null) {
+				if (data) {
 					data.$mobileHandles.remove();
 					data.$tabber.removeClass("tabber initialized " + data.customClass)
 							    .off(".tabber")
@@ -55,7 +55,7 @@
 			return $(this).each(function(i) {
 				var data = $(this).data("tabber");
 
-				if (data !== null) {
+				if (data) {
 					_set(data, index - 1);
 				}
 			});
