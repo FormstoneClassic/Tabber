@@ -5,10 +5,12 @@
 	 * @options
 	 * @param customClass [string] <''> "Class applied to instance"
 	 * @param maxWidth [string] <'980px'> "Width at which to auto-disable mobile styles"
+	 * @param vertical [boolean] <false> "Flag to draw vertical tab set"
 	 */
 	var options = {
 		customClass: "",
-		maxWidth: "980px"
+		maxWidth: "980px",
+		vertical: false
 	};
 
 	var pub = {
@@ -92,7 +94,7 @@
 			// Extend Options
 			opts = $.extend({}, opts, $tabber.data("tabber-options"));
 
-			$tabber.addClass("tabber " + opts.customClass);
+			$tabber.addClass("tabber " + opts.customClass + (opts.vertical ? " vertical" : ""));
 
 			var data = $.extend({
 				$tabber: $tabber,
