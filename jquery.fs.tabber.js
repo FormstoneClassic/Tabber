@@ -1,5 +1,5 @@
 /* 
- * Tabber v3.0.9 - 2014-07-19 
+ * Tabber v3.0.10 - 2014-07-19 
  * A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
  * http://formstone.it/tabber/ 
  * 
@@ -111,6 +111,8 @@
 				index: -1
 			}, opts);
 
+			var index = data.$handles.index( data.$handles.filter(".active") );
+
 			for (var i = 0, count = data.$handles.length; i < count; i++) {
 				data.$tabs.eq(i).before('<span class="tabber-handle mobile">' + data.$handles.eq(i).text() + '</span>');
 			}
@@ -129,8 +131,6 @@
 				});
 				_onRespond.apply(data.$tabber);
 			}
-
-			var index = data.$handles.index( data.$handles.filter(".active") );
 
 			_set(data, ((index > -1) ? index : 0) );
 		}
