@@ -122,7 +122,9 @@
 				_onRespond.apply(data.$tabber);
 			}
 
-			_set(data, 0);
+			var index = data.$tabs.index(".active");
+
+			_set(data, ((index > -1) ? index : 0) );
 		}
 	}
 
