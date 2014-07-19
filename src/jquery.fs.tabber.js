@@ -122,7 +122,7 @@
 				_onRespond.apply(data.$tabber);
 			}
 
-			var index = data.$tabs.index(".active");
+			var index = data.$handles.index( data.$tabs.filter(".active") );
 
 			_set(data, ((index > -1) ? index : 0) );
 		}
