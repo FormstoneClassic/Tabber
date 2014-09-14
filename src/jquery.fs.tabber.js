@@ -107,8 +107,8 @@
 
 			var data = $.extend({
 				$tabber: $tabber,
-				$tabs: $tabber.find(".tabber-tab"),
-				$handles: $tabber.find(".tabber-handle"),
+				$tabs: $tabber.find(".tabber-tab:first").siblings(".tabber-tab").addBack(),
+				$handles: $tabber.find(".tabber-handle:first").siblings(".tabber-handle").addBack(),
 				index: -1
 			}, opts);
 

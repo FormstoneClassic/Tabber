@@ -1,5 +1,5 @@
 /* 
- * Tabber v3.0.12 - 2014-09-14 
+ * Tabber v3.0.13 - 2014-09-14 
  * A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
  * http://formstone.it/tabber/ 
  * 
@@ -115,8 +115,8 @@
 
 			var data = $.extend({
 				$tabber: $tabber,
-				$tabs: $tabber.find(".tabber-tab"),
-				$handles: $tabber.find(".tabber-handle"),
+				$tabs: $tabber.find(".tabber-tab:first").siblings(".tabber-tab").addBack(),
+				$handles: $tabber.find(".tabber-handle:first").siblings(".tabber-handle").addBack(),
 				index: -1
 			}, opts);
 
