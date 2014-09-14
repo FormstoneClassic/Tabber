@@ -2,7 +2,7 @@
   "name": "Tabber",
   "id": "tabber",
   "codename": "jquery.fs.tabber",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "description": "A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library.",
   "keywords": [
   	"tab",

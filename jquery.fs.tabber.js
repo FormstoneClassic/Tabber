@@ -1,5 +1,5 @@
 /* 
- * Tabber v3.0.11 - 2014-09-14 
+ * Tabber v3.0.12 - 2014-09-14 
  * A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
  * http://formstone.it/tabber/ 
  * 
@@ -51,6 +51,10 @@
 				var data = $(this).data("tabber");
 
 				if (data) {
+					if (window.matchMedia !== undefined) {
+						data.mediaQuery.removeListener(data.mediaQueryListener);
+					}
+
 					data.$mobileHandles.remove();
 					data.$tabber.removeClass("tabber initialized " + data.customClass)
 							    .off(".tabber")
@@ -130,10 +134,13 @@
 			// Navtive MQ Support
 			if (window.matchMedia !== undefined) {
 				data.mediaQuery = window.matchMedia("(max-width:" + (data.maxWidth === Infinity ? "100000px" : data.maxWidth) + ")");
+
 				// Make sure we stay in context
-				data.mediaQuery.addListener(function() {
+				data.mediaQueryListener = function() {
 					_onRespond.apply(data.$tabber);
-				});
+				};
+				data.mediaQuery.addListener(data.mediaQueryListener);
+
 				_onRespond.apply(data.$tabber);
 			}
 

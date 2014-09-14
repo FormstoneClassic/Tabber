@@ -30,19 +30,23 @@
 		<!--[DEMO:START-RESOURCES]-->
 
 		<style>
-			.demo .tabber .tabber-handle { display: block; float: left; font-size: 16px; line-height: 40px; margin: 0 1px 0 0; padding: 0 20px; }
-			.demo .tabber .tabber-handle.active { background: #eee; }
+			.demo .tabbed .tabber-handle { font-size: 16px; line-height: 40px; margin: 0 1px 0 0; padding: 0 20px; }
+			.demo .tabbed .tabber-handle.active { background: #eee; }
 
-			.demo .tabber .tabber-tab { background: #eee; padding: 20px; }
-			.demo .tabber .tabber-tab p { margin: 10px 0; }
+			.demo .tabbed .tabber-tab { background: #eee; padding: 20px; }
+			.demo .tabbed .tabber-tab p { margin: 10px 0; }
 
-			.demo .tabber.mobile .tabber-tab { padding-top: 10px; }
-			.demo .tabber.mobile .tabber-tab p { margin-top: 0; }
+			.demo .tabbed.mobile .tabber-tab { padding-top: 10px; }
+			.demo .tabbed.mobile .tabber-tab p { margin-top: 0; }
 		</style>
 
 		<script>
 			$(document).ready(function() {
 				$(".demo .tabbed").tabber();
+
+				$(window).one("pronto.load", function() {
+					$(".demo .tabbed").tabber("destroy");
+				});
 			});
 		</script>
 
