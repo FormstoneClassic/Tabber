@@ -1,6 +1,6 @@
 {
   "name": "tabber",
-  "version": "3.0.10",
+  "version": "3.0.11",
   "title": "Tabber",
   "author": {
     "name": "Ben Plum",
@@ -23,12 +23,11 @@
     "ui",
     "javascript",
     "jquery",
-    "formstone",
-    "benplum"
+    "formstone"
   ],
   "docs": "http://formstone.it/tabber/",
   "demo": "http://formstone.it/tabber/",
-  "download": "https://github.com/benplum/Tabber",
-  "bugs": "https://github.com/benplum/Tabber/issues",
+  "download": "https://github.com/Formstone/Tabber",
+  "bugs": "https://github.com/Formstone/Tabber/issues",
   "homepage": "http://formstone.it/tabber/"
 }

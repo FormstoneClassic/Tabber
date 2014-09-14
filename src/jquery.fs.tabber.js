@@ -13,6 +13,11 @@
 		vertical: false
 	};
 
+	/**
+	 * @events
+	 * @event update.tabber "Active tab updated"
+	 */
+
 	var pub = {
 
 		/**
@@ -183,6 +188,8 @@
 		data.$mobileHandles.removeClass("active")
 						   .eq(data.index)
 						   .addClass("active");
+
+		data.$tabber.trigger("update.tabber", [ data.index ]);
 	}
 
 	/**

@@ -1,5 +1,5 @@
 /* 
- * Tabber v3.0.10 - 2014-07-19 
+ * Tabber v3.0.11 - 2014-09-14 
  * A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
  * http://formstone.it/tabber/ 
  * 
@@ -20,6 +20,11 @@
 		maxWidth: "980px",
 		vertical: false
 	};
+
+	/**
+	 * @events
+	 * @event update.tabber "Active tab updated"
+	 */
 
 	var pub = {
 
@@ -191,6 +196,8 @@
 		data.$mobileHandles.removeClass("active")
 						   .eq(data.index)
 						   .addClass("active");
+
+		data.$tabber.trigger("update.tabber", [ data.index ]);
 	}
 
 	/**
