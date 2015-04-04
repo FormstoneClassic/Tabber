@@ -25,9 +25,9 @@
     "jquery",
     "formstone"
   ],
-  "docs": "http://formstone.it/tabber/",
-  "demo": "http://formstone.it/tabber/",
-  "download": "https://github.com/Formstone/Tabber",
-  "bugs": "https://github.com/Formstone/Tabber/issues",
-  "homepage": "http://formstone.it/tabber/"
+  "docs": "http://classic.formstone.it/tabber/",
+  "demo": "http://classic.formstone.it/tabber/",
+  "download": "https://github.com/FormstoneClassic/Tabber",
+  "bugs": "https://github.com/FormstoneClassic/Tabber/issues",
+  "homepage": "http://classic.formstone.it/tabber/"
 }

@@ -1,9 +1,9 @@
 /* 
- * Tabber v3.0.13 - 2014-09-14 
+ * Tabber v3.0.13 - 2015-04-04 
  * A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
- * http://formstone.it/tabber/ 
+ * http://classic.formstone.it/tabber/ 
  * 
- * Copyright 2014 Ben Plum; MIT Licensed 
+ * Copyright 2015 Ben Plum; MIT Licensed 
  */ 
 
 ;(function ($, window) {
@@ -37,7 +37,7 @@
 		 */
 		defaults: function(opts) {
 			options = $.extend(options, opts || {});
-			return $(this);
+			return (typeof this === 'object') ? $(this) : true;
 		},
 
 		/**

@@ -14,10 +14,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Formstone/Tabber"
+    "url": "https://github.com/FormstoneClassic/Tabber"
   },
-  "homepage": "http://formstone.it/tabber/",
-  "demo": "http://formstone.it/components/Tabber/demo/index.html",
+  "homepage": "http://classic.formstone.it/tabber/",
+  "demo": "http://classic.formstone.it/components/Tabber/demo/index.html",
   "license": "MIT",
   "author": {
     "name": "Ben Plum",

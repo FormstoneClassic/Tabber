@@ -1,37 +1,8 @@
 /* 
- * Tabber v3.0.13 - 2014-09-14 
+ * Tabber v3.0.13 - 2015-04-04 
  * A jQuery plugin for adding simple tabbed interfaces. Part of the Formstone Library. 
- * http://formstone.it/tabber/ 
+ * http://classic.formstone.it/tabber/ 
  * 
- * Copyright 2014 Ben Plum; MIT Licensed 
+ * Copyright 2015 Ben Plum; MIT Licensed 
  */ 
 
-	.tabber { overflow: hidden; }
-
-	.tabber .tabber-menu { display: block; margin: 0; padding: 0; }
-	.tabber .tabber-handle { color: #999; cursor: pointer; display: block; float: left;
-		-webkit-transition: none;
-		   -moz-transition: none;
-		   	-ms-transition: none;
-		   	 -o-transition: none;
-		   	 	transition: none;
-	}
-	.tabber .tabber-handle.active { color: #333; }
-	.tabber .tabber-handle.mobile { display: none; float: none; }
-
-	.tabber .tabber-tab { clear: both; display: none; }
-	.tabber .tabber-tab.active { display: block; }
-
-	/* Vertical */
-	.tabber.vertical .tabber-menu { float: left; width: 20%; }
-	.tabber.vertical .tabber-handle { display: block; width: 100%; }
-	.tabber.vertical .tabber-handle.mobile { display: none; }
-
-	.tabber.vertical .tabber-tab { clear: none; float: right; min-height: 100%; width: 80%; }
-
-	/* Mobile */
-	.tabber.mobile .tabber-handle { display: none; }
-	.tabber.mobile .tabber-handle.mobile { display: block; }
-
-	.tabber.vertical.mobile .tabber-menu,
-	.tabber.vertical.mobile .tabber-tab { float: none; width: 100%; }
